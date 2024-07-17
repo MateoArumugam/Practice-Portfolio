@@ -39,13 +39,9 @@ body {
 
 /* Header Styles */
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     background: rgba(0, 0, 0, 0.188);
     color: #333;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-bottom: #000000 3px solid;
@@ -121,12 +117,10 @@ nav {
 nav ul {
     padding: 0;
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 nav ul li {
+    display: inline-block;
     margin: 0 10px;
 }
 
@@ -306,11 +300,8 @@ footer {
         font-size: 1em;
     }
     
-    nav ul {
-        flex-direction: column;
-    }
-
     nav ul li {
+        display: block;
         margin: 5px 0;
     }
 
