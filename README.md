@@ -79,7 +79,7 @@
     
         <footer>
             <div class="container">
-                <p id = "footertext">&copy; 2024 Mateo Arumugam. All Rights Reserved.</p>
+                <p id="footertext">&copy; 2024 Mateo Arumugam. All Rights Reserved.</p>
             </div>
         </footer>
     </div>
@@ -111,3 +111,4 @@
     </script>
 </body>
 </html>
+
