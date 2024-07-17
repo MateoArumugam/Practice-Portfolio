@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -31,37 +32,14 @@ body {
     position: relative;
     z-index: 1;
     overflow: auto; /* Enable scrolling */
-}
-
-/* Additional styles for your sections, nav, header, footer, etc. */
-
-
-
-p, h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #000000;
-    text-align: center;
-    font-weight: bold;
-    font-size:x-large;
-    animation: fadeIn 18s;
-}
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.container {
-    width: 85%;
-    margin: auto;
-    overflow: hidden;
+    padding: 20px;
 }
 
 /* Header Styles */
 header {
     background: rgba(0, 0, 0, 0.188);
     color: #333;
-    padding: 40px 0;
+    padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-bottom: #000000 3px solid;
@@ -69,19 +47,19 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 48px;
+    font-size: 2em;
     animation: fadeInDown 10s;
 }
 
 header p {
-    font-size: 24px;
+    font-size: 1.2em;
     margin: 10px 0;
     animation: fadeInUp 10s;
 }
 
 header .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: 3px solid #000000;
     margin-bottom: 20px;
@@ -140,8 +118,8 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -157,7 +135,7 @@ nav ul li a:hover {
 
 /* Section Styles */
 section {
-    padding: 100px 0;
+    padding: 50px 0;
     border: 10px solid #ffffff33;
     border-bottom: 10px solid rgba(255, 255, 255, 0.267);
     background: rgba(0, 49, 41, 0.619);
@@ -168,7 +146,7 @@ section {
 section h2 {
     text-align: center;
     margin: 0 0 20px;
-    font-size: 40px;
+    font-size: 2em;
     color: #44fdc6bb;
     animation: fadeIn 20s;
 }
@@ -180,9 +158,9 @@ section h2 {
 
 .project {
     background: #24f3de55;
-    padding: 60px;
-    margin-bottom: 50px;
-    border-radius: 100px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.386);
     transition: transform 0.5s;
 }
@@ -222,8 +200,8 @@ section h2 {
 #skills ul li {
     background: #24f3de;
     color: #000000;
-    padding: 20px 30px;
-    margin: 20px;
+    padding: 10px 20px;
+    margin: 10px;
     border-radius: 20px;
     font-weight: bold;
     transition: transform 0.1s;
@@ -258,6 +236,39 @@ footer {
     margin-top: 20px;
 }
 
-#footertext{
+#footertext {
     color: #24f3de; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 20px 0;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+    
+    .project {
+        padding: 10px;
+    }
+    
+    #skills ul li {
+        padding: 5px 10px;
+        margin: 5px;
+    }
 }
