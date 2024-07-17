@@ -25,7 +25,7 @@ body {
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
-    background: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+    background: rgba(0, 0, 0, 0.61); /* Adjust transparency as needed */
 }
 
 .content {
@@ -39,8 +39,8 @@ body {
 
 /* Header Styles */
 header {
-    background: rgba(0, 0, 0, 0.188);
-    color: #333;
+    background: rgba(0, 0, 0, 0.651);
+    color: #ffffff;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -349,4 +349,3 @@ footer {
         margin: 3px;
     }
 }
-
