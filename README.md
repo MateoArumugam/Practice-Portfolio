@@ -17,11 +17,10 @@
     <div class="overlay"></div>
 
     <!-- Background audio -->
-    <audio autoplay loop>
+    <audio autoplay loop id="bgAudio">
         <source src="background.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-
 
     <!-- Content -->
     <div class="content">
@@ -89,7 +88,26 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var vid = document.getElementById('bgvid');
-        vid.playbackRate = 1; // Adjust playback rate if needed
+        var audio = document.getElementById('bgAudio');
+        
+        // Check if video and audio elements are loaded
+        console.log(vid, audio);
+
+        // Play the video at normal speed
+        vid.playbackRate = 1;
+
+        // Play audio after user interaction
+        window.addEventListener('click', function() {
+            audio.play();
+        });
+
+        // Debugging: Check if audio is playing
+        audio.onplay = function() {
+            console.log("Audio is playing");
+        };
+        audio.onerror = function() {
+            console.error("Error playing audio");
+        };
     });
     </script>
 </body>
