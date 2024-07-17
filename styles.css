@@ -33,13 +33,15 @@ body {
     z-index: 1;
     overflow: auto; /* Enable scrolling */
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Header Styles */
 header {
     background: rgba(0, 0, 0, 0.188);
     color: #333;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-bottom: #000000 3px solid;
@@ -140,7 +142,9 @@ section {
     border-bottom: 10px solid rgba(255, 255, 255, 0.267);
     background: rgba(0, 49, 41, 0.619);
     margin-top: 20px;
-    border-radius: 100px;
+    border-radius: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 section h2 {
@@ -163,6 +167,7 @@ section h2 {
     border-radius: 20px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.386);
     transition: transform 0.5s;
+    box-sizing: border-box;
 }
 
 .project:hover {
@@ -195,6 +200,7 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0;
 }
 
 #skills ul li {
@@ -205,6 +211,7 @@ section h2 {
     border-radius: 20px;
     font-weight: bold;
     transition: transform 0.1s;
+    box-sizing: border-box;
 }
 
 #skills ul li:hover {
@@ -241,7 +248,50 @@ footer {
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+    .content {
+        padding: 10px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    header p {
+        font-size: 1.1em;
+    }
+    
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+    
+    .project {
+        padding: 15px;
+    }
+    
+    #skills ul li {
+        padding: 8px 15px;
+        margin: 8px;
+    }
+}
+
 @media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
     header h1 {
         font-size: 1.5em;
     }
@@ -256,7 +306,7 @@ footer {
     }
 
     section {
-        padding: 20px 0;
+        padding: 20px 10px;
     }
 
     section h2 {
@@ -270,5 +320,32 @@ footer {
     #skills ul li {
         padding: 5px 10px;
         margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+    
+    header p {
+        font-size: 0.9em;
+    }
+
+    section {
+        padding: 15px 5px;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+    
+    .project {
+        padding: 8px;
+    }
+    
+    #skills ul li {
+        padding: 3px 8px;
+        margin: 3px;
     }
 }
