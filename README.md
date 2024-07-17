@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,11 +18,10 @@
     <div class="overlay"></div>
 
     <!-- Background audio -->
-    <audio autoplay loop>
+    <audio autoplay loop id="bgAudio">
         <source src="background.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-
 
     <!-- Content -->
     <div class="content">
@@ -80,7 +80,7 @@
     
         <footer>
             <div class="container">
-                <p id = "footertext">&copy; 2024 Mateo Arumugam. All Rights Reserved.</p>
+                <p id="footertext">&copy; 2024 Mateo Arumugam. All Rights Reserved.</p>
             </div>
         </footer>
     </div>
@@ -89,7 +89,25 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var vid = document.getElementById('bgvid');
-        vid.playbackRate = 1; // Adjust playback rate if needed
+        var audio = document.getElementById('bgAudio');
+        
+        // Play the video at normal speed
+        vid.playbackRate = 1;
+
+        // Attempt to play audio immediately
+        audio.play().then(() => {
+            console.log("Audio is playing");
+        }).catch(error => {
+            console.error("Error playing audio:", error);
+            alert("Click anywhere on the page to enable sound.");
+        });
+
+        // Fallback: Play audio after user interaction if autoplay is blocked
+        document.body.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+            }
+        });
     });
     </script>
 </body>
