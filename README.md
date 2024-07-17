@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -90,24 +91,23 @@
         var vid = document.getElementById('bgvid');
         var audio = document.getElementById('bgAudio');
         
-        // Check if video and audio elements are loaded
-        console.log(vid, audio);
-
         // Play the video at normal speed
         vid.playbackRate = 1;
 
-        // Play audio after user interaction
-        window.addEventListener('click', function() {
-            audio.play();
+        // Attempt to play audio immediately
+        audio.play().then(() => {
+            console.log("Audio is playing");
+        }).catch(error => {
+            console.error("Error playing audio:", error);
+            alert("Click anywhere on the page to enable sound.");
         });
 
-        // Debugging: Check if audio is playing
-        audio.onplay = function() {
-            console.log("Audio is playing");
-        };
-        audio.onerror = function() {
-            console.error("Error playing audio");
-        };
+        // Fallback: Play audio after user interaction if autoplay is blocked
+        document.body.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+            }
+        });
     });
     </script>
 </body>
