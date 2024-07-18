@@ -41,9 +41,10 @@ hr {
     margin: 0 auto;
 }
 
-#container {
+.container {
     size: auto;
-     position: fixed;
+    position: center;
+    max-width: 100%;
 }
 
 /* Header Styles */
@@ -54,6 +55,7 @@ header {
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-bottom: #000000 3px solid;
+    max-width: 100%;
 }
 
 header h1 {
@@ -147,7 +149,6 @@ nav ul li a:hover {
 /* Section Styles */
 section {
     padding: 50px 0;
-    border: 10px solid #ffffff33;
     border-bottom: 10px solid rgba(255, 255, 255, 0.267);
     background: rgba(0, 49, 41, 0.619);
     margin-top: 20px;
