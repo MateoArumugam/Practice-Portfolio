@@ -25,11 +25,10 @@
     <!-- Content -->
     <div class="content">
         <header>
-            <div class="container">
                 <img src="picture.jpg" alt="Profile Picture" class="profile-pic">
                 <h1>Mateo Arumugam</h1>
                 <p>Software Developer | JavaScript Enthusiast | Front-End Specialist</p>
-            </div>
+            
         </header>
         
         <nav>
