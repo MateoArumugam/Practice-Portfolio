@@ -62,19 +62,21 @@ header h1 {
     margin: 0;
     font-size: 2em;
     animation: fadeInDown 10s;
+    color: #fabe7a;
 }
 
 header p {
     font-size: 1.2em;
     margin: 10px 0;
     animation: fadeInUp 10s;
+    color: #fabe7a;
 }
 
 header .profile-pic {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 3px solid #000000;
+    border: 3px solid #24f3de;
     margin-bottom: 20px;
     animation: bounceIn 15s;
 }
@@ -143,7 +145,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffffff;
+    color: #fabe7a;
 }
 
 /* Section Styles */
@@ -186,6 +188,7 @@ section h2 {
 
 .project h3 {
     margin-top: 0;
+    color: #fabe7a;
 }
 
 .project p {
@@ -214,7 +217,7 @@ section h2 {
 }
 
 #skills ul li {
-    background: #24f3de;
+    background: #fabe7a;
     color: #000000;
     padding: 10px 20px;
     margin: 10px;
@@ -226,22 +229,24 @@ section h2 {
 
 #skills ul li:hover {
     transform: scale(1.1);
+    background: #24f3de;
 }
 
 /* Contact Styles */
 #contact p {
     text-align: center;
+    color: #fabe7a;
 }
 
 #contact a {
-    color: #ffffff81;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 #contact a:hover {
-    color: #61c5ff;
+   color: #61c5ff;
 }
 
 /* Footer Styles */
