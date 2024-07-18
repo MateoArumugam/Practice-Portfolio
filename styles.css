@@ -41,6 +41,10 @@ hr {
     margin: 0 auto;
 }
 
+#container {
+    size: auto;
+}
+
 /* Header Styles */
 header {
     background: rgba(0, 0, 0, 0.651);
